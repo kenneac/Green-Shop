@@ -8,7 +8,7 @@ export default defineConfig({
   server:{
     proxy:{
       '/api':{
-        target: "https://green-shop-backend-3fod.onrender.com"
+        target: "https://green-shop-backend-3fod.onrender.com/"
       },
       '/images':{
         target: "https://green-shop-backend-3fod.onrender.com"
