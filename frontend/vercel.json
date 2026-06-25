@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://green-shop-backend-3fod.onrender.com/api/:path*"
+    },
+    {
+      "source": "/images/:path*",
+      "destination": "https://green-shop-backend-3fod.onrender.com/images/:path*"
+    }
+  ]
+}

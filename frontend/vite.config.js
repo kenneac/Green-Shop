@@ -1,19 +1,18 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 
+//  https://vite.dev/config/
+// for local development
 export default defineConfig({
   plugins: [react()],
-  server: {
-    proxy: {
-      '/api': {
-        target: 'https://green-shop-backend-3fod.onrender.com',
-        changeOrigin: true,   // ← fixes the Host header mismatch
-        secure: true,         // ← keeps HTTPS verification on (default, but explicit)
+    //shortcuts for working with url
+  server:{
+    proxy:{
+      '/api':{
+        target: "http://localhost:3000"
       },
-      '/images': {
-        target: 'https://green-shop-backend-3fod.onrender.com',
-        changeOrigin: true,
-        secure: true,
+      '/images':{
+        target: "http://localhost:3000"
       }
     }
   }
